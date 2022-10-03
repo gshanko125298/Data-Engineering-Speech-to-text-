@@ -137,28 +137,15 @@ To build a nemo container with Dockerfile from a branch, please run
 
 If you chose to work with main branch, we recommend using NVIDIA's PyTorch container version 22.08-py3 and then installing from GitHub.
 
-docker run --gpus all -it --rm -v <nemo_github_folder>:/NeMo --shm-size=8g \
--p 8888:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit \
-stack=67108864 --device=/dev/snd nvcr.io/nvidia/pytorch:22.08-py3
+- docker run --gpus all -it --rm -v <nemo_github_folder>:/NeMo --shm-size=8g \
+- p 8888:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit \
+- stack=67108864 --device=/dev/snd nvcr.io/nvidia/pytorch:22.08-py3
 
 Examples
 
 Many examples can be found under "Examples" folder.
 Contributing
 
-We welcome community contributions! Please refer to the CONTRIBUTING.md CONTRIBUTING.md for the process.
-Publications
 
-We provide an ever growing list of publications that utilize the NeMo framework. Please refer to PUBLICATIONS.md. We welcome the addition of your own articles to this list !
-Citation
 
-@article{kuchaiev2019nemo,
-  title={Nemo: a toolkit for building ai applications using neural modules},
-  author={Kuchaiev, Oleksii and Li, Jason and Nguyen, Huyen and Hrinchuk, Oleksii and Leary, Ryan and Ginsburg, Boris and Kriman, Samuel and Beliaev, Stanislav and Lavrukhin, Vitaly and Cook, Jack and others},
-  journal={arXiv preprint arXiv:1909.09577},
-  year={2019}
-}
 
-License
-
-NeMo is under Apache 2.0 license.
